@@ -26,18 +26,39 @@
 <?php
 
 // @todo .env will be used here, to make private variables for the database
-$host = "";
-$username = "";
-$password = "";
-$dbname = "";
+try {
+    // Set path to .env file
+    $envFilePath = __DIR__ . '/.env';
 
-// @todo errorHandler will be used here if the database or internet connection is not available
-// Creating connection, with host, username, password and dbname
-$conn = new mysqli($host, $username, $password, $dbname);
+    // Check if the .env file exists
+    if (file_exists($envFilePath)) {
+        // read .env file line by line
+        $lines = file($envFilePath, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
 
-// If the connection failed
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+        $envVars = [];
+
+        // Read variables stored in .env file
+        foreach ($lines as $line) {
+            list($key, $value) = explode('=', $line, 2);
+            $envVars[$key] = $value;
+        }
+
+        // Check that the required keys are really defined
+        if (isset($envVars['DB_HOST'], $envVars['DB_USERNAME'], $envVars['DB_PASSWORD'], $envVars['DB_NAME'])) {
+            $host = $envVars['DB_HOST'];
+            $username = $envVars['DB_USERNAME'];
+            $password = $envVars['DB_PASSWORD'];
+            $dbname = $envVars['DB_NAME'];
+
+            // Creating connection, with host, username, password and dbname
+            $conn = new mysqli($host, $username, $password, $dbname);
+
+        }
+    }
+} catch (Exception $e) {
+    // @todo errorHandler
+    echo ("Error: " . $e->getMessage());
+    exit;
 }
 
 // Optionally set charset
