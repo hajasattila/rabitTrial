@@ -3,6 +3,7 @@
 class userService
 {
     private $db;
+    
     // Constructor
     public function __construct($db)
     {

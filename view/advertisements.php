@@ -15,6 +15,10 @@
         require_once '../db.php';
         require_once '../model/advertisementsModel.php';
         require_once '../controller/advertisementsController.php';
+        require_once '../services/advertisementsService.php';
+
+        $advertisementController = new AdvertisementController($conn);
+        $advertisements = $advertisementController->getAdvertisements();
 
         ?>
 
