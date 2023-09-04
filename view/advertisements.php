@@ -23,12 +23,14 @@
         ?>
 
         <?php if (empty($advertisements)): ?>
-            <p>The "Advertisements" database is empty. 😢</p>
+            <p>The advertisements database is empty. 😢</p>
         <?php else: ?>
             <ul>
                 <?php foreach ($advertisements as $advertisement): ?>
                     <li class="item">
                         <?= $advertisement->getTitle() ?>
+                        -
+                        <?= $advertisement->getUserName($conn) ?>
                     </li>
                 <?php endforeach; ?>
             </ul>

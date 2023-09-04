@@ -29,5 +29,18 @@ class advertisementModel
     {
         return $this->title;
     }
+    //User pairing for advertisements based on user id
+    public function getUserName($connection)
+    {
+        $sql = "SELECT name FROM users WHERE id = " . $this->userid;
+        $result = $connection->query($sql);
+
+        if ($result->num_rows > 0) {
+            $row = $result->fetch_assoc();
+            return $row['name'];
+        }
+
+        return "Unknown User";
+    }
 }
 ?>
