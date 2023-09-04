@@ -21,21 +21,24 @@
 
         <!-- If the database is empty -->
         <?php if (empty($advertisements)): ?>
-            <p>The advertisements database is empty. 😢</p>
+            <p class="item">The advertisements database is empty. 😢</p>
             <!-- If not, show the advertisements, with the users who announced it -->
         <?php else: ?>
             <ul>
                 <?php foreach ($advertisements as $advertisement): ?>
                     <li class="item">
-                        <?= $advertisement->getTitle() ?>
+                        <a class="adv">
+                            <?= $advertisement->getTitle() ?>
+                        </a>
                         -
-                        <?= $advertisement->getUserName($conn) ?>
+                        (
+                        <?= $advertisement->getUserName($conn) ?> )
                     </li>
                 <?php endforeach; ?>
             </ul>
         <?php endif; ?>
 
-        <a href="../index.php" class="list-element">Back to Index</a>
+        <a href="../index.php" class="list-group">Back to Index</a>
     </div>
 </body>
 

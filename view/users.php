@@ -21,7 +21,7 @@
 
         <!-- If the database is empty -->
         <?php if (empty($users)): ?>
-            <p>The 'User' database is empty. 😢</p>
+            <p class="item">The 'User' database is empty. 😢</p>
             <!-- If not, show the users -->
         <?php else: ?>
             <ul>
@@ -34,7 +34,7 @@
         <?php endif; ?>
 
         <!-- Back to the main menu -->
-        <a href="../index.php" class="list-element">Back to Index</a>
+        <a href="../index.php" class="list-group">Back to Index</a>
     </div>
 </body>
 

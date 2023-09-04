@@ -17,8 +17,8 @@
     ?>
     <div class="container">
         <h1>RabIT</h1>
-        <a href="view/users.php" class="list-element">User List</a>
-        <a href="view/advertisements.php" class="list-element">Advertisement List</a>
+        <a href="view/users.php" class="list-group">User List</a>
+        <a href="view/advertisements.php" class="list-group">Advertisement List</a>
     </div>
 </body>
 
