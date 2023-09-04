@@ -45,13 +45,13 @@ try {
 
         // Check that the required keys are really defined
         if (isset($envVars['DB_HOST'], $envVars['DB_USERNAME'], $envVars['DB_PASSWORD'], $envVars['DB_NAME'])) {
-            $host = $envVars['DB_HOST'];
-            $username = $envVars['DB_USERNAME'];
-            $password = $envVars['DB_PASSWORD'];
-            $dbname = $envVars['DB_NAME'];
+            $dbHost = $envVars['DB_HOST'];
+            $dbUsername = $envVars['DB_USERNAME'];
+            $dbPassword = $envVars['DB_PASSWORD'];
+            $dbName = $envVars['DB_NAME'];
 
             // Creating connection, with host, username, password and dbname
-            $conn = new mysqli($host, $username, $password, $dbname);
+            $conn = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
 
         }
     }

@@ -1,13 +1,13 @@
 <?php
-//userModel
+// userModel.php
 class userModel
 {
-    // Private properties to store user informations
+    // Private properties to store user information
     private $id;
     private $username;
 
-    //Constructor to initialize user properties
-    private function __construct($id, $username)
+    // Constructor to initialize user properties (change access to public)
+    public function __construct($id, $username)
     {
         $this->id = $id;
         $this->username = $username;

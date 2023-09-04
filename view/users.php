@@ -12,24 +12,31 @@
         <h1>User List</h1>
 
         <?php
-        require_once '../db.php';
-        require_once '../model/userModel.php';
-        require_once '../controller/userController.php';
-        require_once '../services/userService.php';
+        // Imports
+        require_once '../db.php'; //db
+        require_once '../model/userModel.php'; //User model
+        require_once '../controller/userController.php'; //userController
+        require_once '../services/userService.php'; // userService 
+        
+        $userController = new UserController($conn);
+        $users = $userController->getAllUsers(); //Get all users
         ?>
 
+        <!-- If the database is empty -->
         <?php if (empty($users)): ?>
-            <p>The "Users" database is empty 😢</p>
+            <p>The 'User' database is empty. 😢</p>
+            <!-- If not, show the users -->
         <?php else: ?>
             <ul>
                 <?php foreach ($users as $user): ?>
                     <li class="item">
-                        <?= $user->getName() ?>
+                        <?= $user->getUsername() ?>
                     </li>
                 <?php endforeach; ?>
             </ul>
         <?php endif; ?>
 
+        <!-- Back to the main menu -->
         <a href="../index.php" class="list-element">Back to Index</a>
     </div>
 </body>
