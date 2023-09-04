@@ -12,14 +12,11 @@
         <h1>Advertisements List</h1>
 
         <?php
-        require_once '../db.php';
-        require_once '../model/advertisementsModel.php';
-        require_once '../controller/advertisementsController.php';
-        require_once '../services/advertisementsService.php';
-
-        $advertisementController = new AdvertisementController($conn);
-        $advertisements = $advertisementController->getAdvertisements();
-
+        //Imports
+        require_once '../db.php'; //Database
+        require_once '../model/advertisementsModel.php'; //Model
+        require_once '../controller/advertisementsController.php'; //Controller
+        require_once '../services/advertisementsService.php'; //Service
         ?>
 
         <?php if (empty($advertisements)): ?>

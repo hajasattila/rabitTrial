@@ -3,7 +3,7 @@
 class userService
 {
     private $db;
-    
+
     // Constructor
     public function __construct($db)
     {
@@ -27,7 +27,7 @@ class userService
         if ($result->num_rows > 0) {
             // Iterate through the query result and create User objects
             while ($row = $result->fetch_assoc()) {
-                $user = new userModel($row['id'], $row['name']);    
+                $user = new userModel($row['id'], $row['name']);
                 $users[] = $user;
             }
         }
@@ -36,4 +36,8 @@ class userService
     }
 
 }
+
+// New user instance, to better separation between layers
+$userController = new UserController($conn);
+$users = $userController->getAllUsers(); //Get all users
 ?>

@@ -33,4 +33,7 @@ class advertisementService
         return $advertisements;
     }
 }
+// New user instance, to better separation between layers
+$advertisementController = new AdvertisementController($conn);
+$advertisements = $advertisementController->getAdvertisements();
 ?>

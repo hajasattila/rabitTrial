@@ -14,12 +14,9 @@
         <?php
         // Imports
         require_once '../db.php'; //db
-        require_once '../model/userModel.php'; //User model
-        require_once '../controller/userController.php'; //userController
-        require_once '../services/userService.php'; // userService 
-        
-        $userController = new UserController($conn);
-        $users = $userController->getAllUsers(); //Get all users
+        require_once '../model/userModel.php'; //model
+        require_once '../controller/userController.php'; //Controller
+        require_once '../services/userService.php'; //Service 
         ?>
 
         <!-- If the database is empty -->
