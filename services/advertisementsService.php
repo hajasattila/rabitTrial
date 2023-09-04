@@ -10,6 +10,7 @@ class advertisementService
         $this->db = $db;
     }
 
+    // Get all advertisement from the database
     public function getAllAdvertisements()
     {
         $advertisements = [];
@@ -17,10 +18,6 @@ class advertisementService
         $sql = "SELECT * FROM advertisements";
 
         $result = $this->db->query($sql);
-
-        if (!$result) {
-            throw new Exception("Error querying users: " . $this->db->error);
-        }
 
         if ($result->num_rows > 0) {
             // Iterate through the query result and create Advertisement objects

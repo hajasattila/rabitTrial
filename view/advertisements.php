@@ -19,8 +19,10 @@
         require_once '../services/advertisementsService.php'; //Service
         ?>
 
+        <!-- If the database is empty -->
         <?php if (empty($advertisements)): ?>
             <p>The advertisements database is empty. 😢</p>
+            <!-- If not, show the advertisements, with the users who announced it -->
         <?php else: ?>
             <ul>
                 <?php foreach ($advertisements as $advertisement): ?>

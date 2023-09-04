@@ -24,8 +24,9 @@
     ----------------------------------------------------------------------
  -->
 <?php
+//import
+require_once '../error/errorHandler.php';
 
-// @todo .env will be used here, to make private variables for the database
 try {
     // Set path to .env file
     $envFilePath = __DIR__ . '/.env';
@@ -56,9 +57,8 @@ try {
         }
     }
 } catch (Exception $e) {
-    // @todo errorHandler
-    echo ("Error: " . $e->getMessage());
-    exit;
+    ErrorHandler::logError("Database Error", "A database error occurred", $e);
+
 }
 
 // Optionally set charset

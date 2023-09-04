@@ -7,18 +7,17 @@ class UserController
 
     public function __construct($db)
     {
-        $this->domain = new userService($db); // UserDomain instantiation
+        $this->domain = new userService($db); // UserService instantiation
     }
 
     public function getAllUsers()
     {
         try {
-            // Call the getAllUsers() function from UserDomain.php
+            // Call the getAllUsers() function from UserService.php
             $users = $this->domain->getAllUsers();
             return $users;
         } catch (Exception $e) {
-            // Log the error
-            exit;
+            ErrorHandler::logError("User Controller Error", "An error occurred while fetching users", $e);
         }
     }
 }

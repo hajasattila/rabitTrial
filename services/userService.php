@@ -10,6 +10,7 @@ class userService
         $this->db = $db;
     }
 
+    // Get all user from the database
     public function getAllUsers()
     {
         $users = [];
@@ -17,12 +18,6 @@ class userService
         $sql = "SELECT * FROM users";
 
         $result = $this->db->query($sql);
-
-        // Check if there are any users found
-        if (!$result) {
-            throw new Exception("Error querying users: " . $this->db->error);
-        }
-
 
         if ($result->num_rows > 0) {
             // Iterate through the query result and create User objects
@@ -34,9 +29,7 @@ class userService
 
         return $users;
     }
-
 }
-
 // New user instance, to better separation between layers
 $userController = new UserController($conn);
 $users = $userController->getAllUsers(); //Get all users

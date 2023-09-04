@@ -17,8 +17,7 @@ class AdvertisementController
             $advertisements = $this->domain->getAllAdvertisements();
             return $advertisements;
         } catch (Exception $e) {
-            // @todo Log the error
-            exit($e->getMessage());
+            ErrorHandler::logError("Advertisement Controller Error", "An error occurred while fetching advertisements", $e);
         }
     }
 }
