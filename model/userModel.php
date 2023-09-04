@@ -1,0 +1,7 @@
+<?php
+//userModel
+class userModel
+{
+
+}
+?>
