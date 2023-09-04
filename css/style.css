@@ -1,0 +1,48 @@
+/* styles.css */
+
+/*CSS variables*/
+:root {
+  --white: #ffffff;
+}
+
+/* Set the base styles for the whole page */
+body {
+  font-family: "Lucida Sans";
+  display: flex;
+  background-color: antiquewhite;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Create a container for the content */
+.container {
+  text-align: center;
+  background-color: var(--white);
+  padding: 8rem;
+  display: flex;
+  margin: 0, auto;
+  border-radius: 3rem;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Remove the line under the links*/
+a {
+  text-decoration: none;
+}
+
+/* Style for the links */
+.list-element {
+  background-color: #3498db;
+  color: var(--white);
+  border-radius: 1rem;
+  padding: 1rem 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.list-element:hover {
+  background-color: #2980b9;
+}

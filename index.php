@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RabIT - Feladat</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -14,8 +15,10 @@
      * Basicly make a one pager php site.
      */
     ?>
-    <a href="view/users.php">User List</a>
-    <a href="view/advertisements.php">Advertisement List</a>
+    <div class="container">
+        <a href="view/users.php" class="list-element">User List</a>
+        <a href="view/advertisements.php" class="list-element">Advertisement List</a>
+    </div>
 </body>
 
 </html>
