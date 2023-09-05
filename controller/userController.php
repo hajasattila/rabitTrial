@@ -1,6 +1,6 @@
 <?php
 // userController.php
-
+require_once '../services/userService.php'; //Service 
 class UserController
 {
     private $domain;

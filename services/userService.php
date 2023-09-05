@@ -1,5 +1,6 @@
 <?php
 //userService.php
+require_once '../model/userModel.php'; //model 
 class userService
 {
     private $db;

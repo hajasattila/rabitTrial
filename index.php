@@ -44,7 +44,6 @@ $title = $pages[$page] ?? "Index";
                 <?php endif; ?>
             <?php endif; ?>
         <?php endif; ?>
-
     </div>
 </body>
 

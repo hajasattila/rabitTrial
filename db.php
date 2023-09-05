@@ -1,3 +1,5 @@
+<?php
+/*
 <!-- 
     Database was created based on these configurations:
 
@@ -22,8 +24,7 @@
     'advertisement' table:
     INSERT INTO advertisements (userid, title) VALUES (1, 'smthng');
     ----------------------------------------------------------------------
- -->
-<?php
+ -->*/
 //import
 require_once 'error/errorHandler.php';
 
@@ -57,8 +58,8 @@ try {
         }
     }
 } catch (Exception $e) {
+    //Log the exception is there any
     ErrorHandler::logError("Database Error", "A database error occurred", $e);
-
 }
 
 // Optionally set charset
