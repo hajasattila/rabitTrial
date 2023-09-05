@@ -1,0 +1,16 @@
+RewriteEngine On
+
+
+
+# URLs for pages
+RewriteRule ^main$ index.php?page=main [L]
+RewriteRule ^users$ index.php?page=users [L]
+RewriteRule ^advertisements$ index.php?page=advertisements [L]
+
+# URL átírás: .php eltávolítása
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+# URL átírás: .php eltávolítása, ha a fájl létezik
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]

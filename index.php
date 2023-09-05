@@ -1,24 +1,50 @@
 <!DOCTYPE html>
+<?php
+$pages = [
+    'main' => 'Index',
+    'users' => 'Users',
+    'advertisements' => 'Advertisements',
+];
+
+$page = $_GET["page"] ?? "main";
+$title = $pages[$page] ?? "Index";
+?>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RabIT - Feladat</title>
+    <title>
+        <?= $title ?> | RabIT
+    </title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <?php
-    /* @todo: add php elements so that only the index is the entry point of the program
-     * variables, so the title changes dynamically.
-     * Basicly make a one pager php site.
-     */
-    ?>
     <div class="container">
-        <h1>RabIT</h1>
-        <a href="view/users.php" class="list-group">User List</a>
-        <a href="view/advertisements.php" class="list-group">Advertisement List</a>
+        <?php if ($page === 'main'): ?>
+            <h1>RabIT</h1>
+            <?php foreach ($pages as $key => $value): ?>
+                <?php if ($key !== 'main'): ?>
+                    <a href="?page=<?= $key ?>" class="list-group"><?= $value ?></a>
+                <?php endif; ?>
+            <?php endforeach; ?>
+        <?php endif; ?>
+
+        <?php if (!array_key_exists($page, $pages)): ?>
+            <h2>Page not found</h2>
+            <p><a href="index.php?page=main" class="list-group">Back to the main page</a></p>
+        <?php else: ?>
+            <?php if (isset($_GET['page'])): ?>
+                <?php $page = $_GET['page']; ?>
+                <?php if ($page === 'users'): ?>
+                    <?php include 'view/users.php'; ?>
+                <?php elseif ($page === 'advertisements'): ?>
+                    <?php include 'view/advertisements.php'; ?>
+                <?php endif; ?>
+            <?php endif; ?>
+        <?php endif; ?>
+
     </div>
 </body>
 
