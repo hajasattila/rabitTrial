@@ -1,0 +1,8 @@
+2023-09-05 15:23:45 [Error] Failed to fetch data from the 'users' database.
+Details: Failed to fetch data from the 'users' database.
+#0 C:\xampp\htdocs\rabitTrial\index.php(44): include()
+#1 {main}
+2023-09-05 15:23:52 [Error] Failed to fetch data from the 'advertisements' database.
+Details: Failed to fetch data from the 'advertisements' database.
+#0 C:\xampp\htdocs\rabitTrial\index.php(46): include()
+#1 {main}

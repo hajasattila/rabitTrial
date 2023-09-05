@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <?php
 $pages = [
-    'main' => 'index',
-    'users' => 'users',
-    'advertisements' => 'advertisements',
+    'main' => 'Index',
+    'users' => 'Users',
+    'advertisements' => 'Advertisements',
 ];
 
 // Get the requested page from parameters
@@ -19,7 +19,7 @@ $title = $pages[$page] ?? "index";
     <title>
         <?= $title ?> | RabIT
     </title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="Css/Style.css">
 </head>
 
 <body>

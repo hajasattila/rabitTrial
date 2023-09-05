@@ -13,7 +13,7 @@ class ErrorHandler
         }
 
         //log the problem here
-        file_put_contents('../Error/Error_log.txt', $errorMessage, FILE_APPEND);
+        file_put_contents('Error/Error_log.txt', $errorMessage, FILE_APPEND);
         exit;
     }
 }

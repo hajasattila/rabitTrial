@@ -61,7 +61,6 @@ try {
     //Log the exception is there any
     ErrorHandler::logError("Database Error", "A database error occurred", $e);
 }
-
 // Optionally set charset
 $conn->set_charset("utf8");
 ?>

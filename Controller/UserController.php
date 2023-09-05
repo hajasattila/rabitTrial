@@ -12,13 +12,10 @@ class UserController
 
     public function getAllUsers()
     {
-        try {
-            // Call the getAllUsers() function from UserService.php
-            $users = $this->domain->getAllUsers();
-            return $users;
-        } catch (Exception $e) {
-            ErrorHandler::logError("User Controller Error", "An error occurred while fetching users", $e);
-        }
+        // Call the getAllUsers() function from UserService.php
+        $users = $this->domain->getAllUsers();
+        return $users;
+
     }
 }
 ?>
