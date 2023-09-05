@@ -1,6 +1,6 @@
-<!-- advertisementController -->
 <?php
-
+// advertisementController
+require_once '../services/advertisementsService.php'; //Service 
 class AdvertisementController
 {
     private $domain;

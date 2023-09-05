@@ -4,7 +4,7 @@
 // Imports
 require_once '../db.php';
 require_once '../controller/userController.php';
-require_once '../error/errorHandler.php'; // Import the ErrorHandler
+require_once '../error/errorHandler.php';
 
 try {
     // Create an instance of UserController
@@ -28,6 +28,6 @@ try {
 
 } catch (Exception $e) {
     // Handle errors using the ErrorHandler class
-    ErrorHandler::logError("API Error", "An error occurred while processing the request", $e);
+    ErrorHandler::logError("Users-API Error", "An error occurred while processing the 'Users' request", $e);
 }
 ?>

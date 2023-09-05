@@ -1,5 +1,6 @@
 <?php
 //advertisementService.php
+require_once '../model/advertisementsModel.php'; //Service 
 class advertisementService
 {
     private $db;
