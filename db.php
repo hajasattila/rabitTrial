@@ -26,7 +26,7 @@
     ----------------------------------------------------------------------
  -->*/
 //import
-require_once 'error/errorHandler.php';
+require_once 'Error/ErrorHandler.php';
 
 try {
     // Set path to .env file

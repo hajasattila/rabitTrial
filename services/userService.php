@@ -1,7 +1,7 @@
 <?php
-//userService.php
-require_once '../model/userModel.php'; //model 
-class userService
+//UserService.php
+require_once '../Model/UserModel.php';
+class UserService
 {
     private $db;
 

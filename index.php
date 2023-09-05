@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <?php
 $pages = [
-    'main' => 'Index',
-    'users' => 'Users',
-    'advertisements' => 'Advertisements',
+    'main' => 'index',
+    'users' => 'users',
+    'advertisements' => 'advertisements',
 ];
 
 // Get the requested page from parameters
 $page = $_GET["page"] ?? "main";
 // Set the page title
-$title = $pages[$page] ?? "Index";
+$title = $pages[$page] ?? "index";
 ?>
 <html lang="en">
 
@@ -32,7 +32,7 @@ $title = $pages[$page] ?? "Index";
                 <?php endif; ?>
             <?php endforeach; ?>
         <?php endif; ?>
-
+        <!-- If the user try to reach a not existed page -->
         <?php if (!array_key_exists($page, $pages)): ?>
             <h2>Page not found</h2>
             <p><a href="index.php?page=main" class="list-group">Back to the main page</a></p>

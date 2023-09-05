@@ -1,4 +1,5 @@
 <?php
+// Advertisements.php
 // API endpoint URL for advertisements
 $apiUrl = 'http://localhost/rabitTrial/api/advertisements-api.php';
 

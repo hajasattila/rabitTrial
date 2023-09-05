@@ -1,6 +1,6 @@
 <?php
-//advertisementModel
-class advertisementModel
+//AdvertisementModel.php
+class AdvertisementModel
 {
     // Private properties to store advertisement informations
     private $id;

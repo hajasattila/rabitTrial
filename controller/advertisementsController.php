@@ -1,13 +1,13 @@
 <?php
-// advertisementController
-require_once '../services/advertisementsService.php'; //Service 
+// AdvertisementController.php
+require_once '../Services/AdvertisementsService.php';
 class AdvertisementController
 {
     private $domain;
 
     public function __construct($db)
     {
-        $this->domain = new advertisementService($db); // AdvertisementService instantiation
+        $this->domain = new AdvertisementService($db); // AdvertisementService instantiation
     }
 
     public function getAdvertisements()

@@ -1,8 +1,7 @@
 <?php
-// users.php
-
+// Users.php
 // Calling the API endpoint
-$apiUrl = 'http://localhost/rabitTrial/api/users-api.php'; // Modify to the correct URL
+$apiUrl = 'http://localhost/rabitTrial/api/usersApi.php'; // Modify to the correct URL
 
 // Make the API request
 $apiResponse = file_get_contents($apiUrl);
@@ -22,6 +21,5 @@ if (empty($userNames)) {
     echo "</ul>";
 }
 
-// Back to the main menu
 echo '<a href="index" class="list-group">Back to Index</a>';
 ?>

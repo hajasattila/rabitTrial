@@ -1,6 +1,6 @@
 <?php
-// userModel.php
-class userModel
+//UserModel.php
+class UserModel
 {
     // Private properties to store user information
     private $id;

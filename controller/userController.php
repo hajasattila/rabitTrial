@@ -1,13 +1,13 @@
 <?php
-// userController.php
-require_once '../services/userService.php'; //Service 
+// UserController.php
+require_once '../Services/UserService.php';
 class UserController
 {
     private $domain;
 
     public function __construct($db)
     {
-        $this->domain = new userService($db); // UserService instantiation
+        $this->domain = new UserService($db); // UserService instantiation
     }
 
     public function getAllUsers()

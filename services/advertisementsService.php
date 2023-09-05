@@ -1,7 +1,7 @@
 <?php
-//advertisementService.php
-require_once '../model/advertisementsModel.php'; //Service 
-class advertisementService
+//AdvertisementService.php
+require_once '../Model/AdvertisementsModel.php';
+class AdvertisementService
 {
     private $db;
 

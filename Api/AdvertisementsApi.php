@@ -1,11 +1,11 @@
 <?php
-// advertisement-api.php
+// AdvertisementApi.php
 
-// Import
+// Imports
 require_once '../db.php';
-require_once '../controller/advertisementsController.php';
-require_once '../controller/userController.php';
-require_once '../error/errorHandler.php'; // Import the ErrorHandler
+require_once '../Controller/AdvertisementsController.php';
+require_once '../Controller/UserController.php';
+require_once '../Error/ErrorHandler.php';
 
 try {
     // Create an instance of AdvertisementsController

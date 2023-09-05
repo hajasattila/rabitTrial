@@ -1,5 +1,5 @@
 <?php
-// errorHandler.php
+// ErrorHandler.php
 class ErrorHandler
 {
     public static function logError($type, $message, $exception = null)
@@ -13,10 +13,7 @@ class ErrorHandler
         }
 
         //log the problem here
-        file_put_contents('error/error_log.txt', $errorMessage, FILE_APPEND);
-
-        // Message to the user
-        echo "An error occurred, please try again later!\n";
+        file_put_contents('../Error/Error_log.txt', $errorMessage, FILE_APPEND);
         exit;
     }
 }
