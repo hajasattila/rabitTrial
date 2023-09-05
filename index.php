@@ -6,7 +6,9 @@ $pages = [
     'advertisements' => 'Advertisements',
 ];
 
+// Get the requested page from parameters
 $page = $_GET["page"] ?? "main";
+// Set the page title
 $title = $pages[$page] ?? "Index";
 ?>
 <html lang="en">
@@ -35,6 +37,7 @@ $title = $pages[$page] ?? "Index";
             <h2>Page not found</h2>
             <p><a href="index.php?page=main" class="list-group">Back to the main page</a></p>
         <?php else: ?>
+            <!-- Include the selected pages content -->
             <?php if (isset($_GET['page'])): ?>
                 <?php $page = $_GET['page']; ?>
                 <?php if ($page === 'users'): ?>

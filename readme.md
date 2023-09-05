@@ -14,6 +14,12 @@ The program has been validated with this extension: [HTML Validator](https://chr
 
 ### rabitTrial/
 
+├── api/
+
+│ ├── *advertisements-api.php*
+
+│ └──  *users-api.php*
+
 ├── controllers/
 
 │ ├── *advertisementController.php*
